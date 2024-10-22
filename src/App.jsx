@@ -1,11 +1,16 @@
 import "./App.css";
+import Blogs from "./Components/Blogs/Blogs";
+import BookMarks from "./Components/BookMarks/BookMarks";
 import Header from "./Components/header/Header";
 
 function App() {
   return (
     <div className="w-11/12 mx-auto">
       <Header></Header>
-      <h3>hi arfat kemon achi</h3>
+      <div className="md:flex gap-4 mb-7">
+        <Blogs></Blogs>
+        <BookMarks></BookMarks>
+      </div>
     </div>
   );
 }
