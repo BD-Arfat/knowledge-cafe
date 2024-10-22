@@ -21,7 +21,7 @@ const Blog = ({ blog, bookMarksMarks }) => {
             <p className="text-xl">
               {reading_time} <span>min read</span>
             </p>
-            <button onClick={bookMarksMarks}>
+            <button onClick={() => bookMarksMarks(blog)}>
               <CiBookmark className="text-2xl" />
             </button>
           </div>
