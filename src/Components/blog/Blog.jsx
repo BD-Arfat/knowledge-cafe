@@ -1,10 +1,12 @@
 import React from "react";
+import { CiBookmark } from "react-icons/ci";
+import { FaBeer } from "react-icons/fa";
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, bookMarksMarks }) => {
   const { cover, title, date, author, author_image, reading_time, hashtag } =
     blog;
   return (
-    <div className="mb-6">
+    <div className="mb-16">
       <div>
         <img src={cover} className="mb-3" alt="" />
         <div className="flex items-center justify-between">
@@ -15,10 +17,13 @@ const Blog = ({ blog }) => {
               <p>{date}</p>
             </div>
           </div>
-          <div>
+          <div className="flex items-center gap-2">
             <p className="text-xl">
-              {reading_time} <span>min read</span>{" "}
+              {reading_time} <span>min read</span>
             </p>
+            <button onClick={bookMarksMarks}>
+              <CiBookmark className="text-2xl" />
+            </button>
           </div>
         </div>
       </div>
