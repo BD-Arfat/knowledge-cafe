@@ -2,7 +2,7 @@ import React from "react";
 import { CiBookmark } from "react-icons/ci";
 import { FaBeer } from "react-icons/fa";
 
-const Blog = ({ blog, bookMarksMarks }) => {
+const Blog = ({ blog, bookMarksMarks, handleMarksAsRead }) => {
   const { cover, title, date, author, author_image, reading_time, hashtag } =
     blog;
   return (
@@ -32,7 +32,10 @@ const Blog = ({ blog, bookMarksMarks }) => {
         <h1 className="font-bold text-3xl mt-3">{title}</h1>
         <p className="text-xl mt-4 mb-6">{hashtag}</p>
       </div>
-      <a href="" className="text-xl underline text-blue-700">
+      <a
+        onClick={() => handleMarksAsRead(reading_time)}
+        className="text-xl cursor-pointer underline text-blue-700"
+      >
         Mark as read
       </a>
     </div>
